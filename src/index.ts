@@ -1,7 +1,6 @@
 import {Rectangle} from "./geometric-shapes/rectangle";
-import {AreaOperation} from "./operations/area-operations";
-import {PerimeterOperation} from "./operations/perimeter-operations";
 import {EquilateralTriangle} from "./geometric-shapes/equilateral-triangle";
+import {Calculator} from "./calculator";
 
 function main () {
     let shapes = [
@@ -12,11 +11,11 @@ function main () {
       new EquilateralTriangle(3)
     ];
 
-    let sumAreas = AreaOperation.sum(shapes);
-    let sumPerimetros = PerimeterOperation.sum(shapes);
+    const calculator = new Calculator();
+    calculator.calc(shapes);
 
-    console.log('Suma de Areas', sumAreas);
-    console.log('Suma de Perimetros', sumPerimetros);
+    console.log('Suma de Areas', calculator.sumArea);
+    console.log('Suma de Perimetros', calculator.sumPerimeter);
 }
 
 main();

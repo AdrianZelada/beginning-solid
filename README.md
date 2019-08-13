@@ -20,3 +20,8 @@ La Clase AA (sub-clase o hija) solo debe añadir comportamiento.
 
 AL modelar las interfaces debemos de asegurarnos de dividir las funcionalidades para que una clase no tenga funcionalidades
 que no le competen.
+
+### Dependency Inversion Principle (DIP)
+
+Reducir la Dependecia entre modulos, Los Modulos no deben de Crear los objetos con los que trabajaran en su lugar alguien
+debe proporcionar esos objetos
