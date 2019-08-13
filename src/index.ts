@@ -1,4 +1,6 @@
 import {Rectangle} from "./rectangle";
+import {AreaOperation} from "./operations/area-operations";
+import {PerimeterOperation} from "./operations/perimeter-operations";
 
 function main () {
     let rectangles = [
@@ -8,8 +10,8 @@ function main () {
       new Rectangle(9, 3),
     ];
 
-    let sumAreas = Rectangle.SumAreas(rectangles);
-    let sumPerimetros = Rectangle.SumPerimetros(rectangles);
+    let sumAreas = AreaOperation.sum(rectangles);
+    let sumPerimetros = PerimeterOperation.sum(rectangles);
 
     console.log('Suma de Areas', sumAreas);
     console.log('Suma de Perimetros', sumPerimetros);
