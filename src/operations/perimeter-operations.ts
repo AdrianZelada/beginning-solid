@@ -1,10 +1,10 @@
-import {Rectangle} from "../rectangle";
+import {GeometricOperations} from "./geometric-operations";
 
 export namespace PerimeterOperation {
-    export function sum(rectangles: Array<Rectangle>) {
+    export function sum(shapes: Array<GeometricOperations>) {
         let perimetro = 0;
-        for(let rectangle of rectangles) {
-            perimetro += (rectangle.width*2) + (rectangle.height*2);
+        for(let shape of shapes) {
+            perimetro += shape.perimeter();
         }
         return perimetro;
     }
